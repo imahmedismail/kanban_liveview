@@ -3,12 +3,12 @@ defmodule KanbanLiveview.Repo.Migrations.CreateCards do
 
   def change do
     create table(:cards) do
-      add :content, :string
-      add :column_id, references(:columns, on_delete: :nothing)
+      add(:content, :string)
+      add(:column_id, references(:columns, on_delete: :nothing))
 
       timestamps()
     end
 
-    create index(:cards, [:column_id])
+    create(index(:cards, [:column_id]))
   end
 end
