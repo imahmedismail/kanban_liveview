@@ -3,7 +3,7 @@ defmodule KanbanLiveview.Repo.Migrations.CreateBoards do
 
   def change do
     create table(:boards) do
-      add :title, :string
+      add(:title, :string)
 
       timestamps()
     end
