@@ -7,7 +7,7 @@ defmodule KanbanLiveview.Boards do
   end
 
   def get_board_by_id(id) do
-    Repo.get!(Board, id)
+    Repo.get(Board, id)
   end
 
   def get_first_board() do
